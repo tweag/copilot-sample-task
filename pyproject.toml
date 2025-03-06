@@ -1,0 +1,32 @@
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "diamond_analysis"
+version = "0.1.0"
+description = "Diamond data analysis task"
+authors = [
+  "Nour El Mawass <nour.elmawass@tweag.io>",
+  "Joe Neeman <joe.neeman@tweag.io@tweag.io>",
+]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8, !=3.9.7"
+pandas = ">=2.0.1, <3.0.0"
+streamlit = "^1.27.0"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.9.1"
+ruff = "^0.0.290"
+isort = "^5.12.0"
+
+[tool.poetry.group.notebook.dependencies]
+notebook = "^7.0.4"
+jupyter = "^1.0.0"
+pandas = ">=2.0.1, <3.0.0"
+
+[tool.ruff]
+select = ["F", "I", "PD"]
